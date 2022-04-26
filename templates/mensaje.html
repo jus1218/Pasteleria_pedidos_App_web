@@ -1,0 +1,13 @@
+{% extends '/base.html'%} {% block title%} Aviso {% endblock %} {% block body %}
+<div class="container">
+  <h1>Aviso Importante</h1>
+  <p>Realizar esta solicitud de pedido de queque con 8 dias de anticipacion e indicando
+      que debe cancelar el 50% a mas tardar 2 dias despues de haber realizado el pedido
+      del queque. De lo contrario no se realizara la elaboracion del queque y debera realizar
+      de nuevo la solicitud del pedido
+  </p>
+  <div class="boton"><a href="{{ url_for('form') }}">Aceptar</a></div>
+  <div class="boton"><a href="/">Cancelar</a></div>
+</div>
+
+{% endblock %}

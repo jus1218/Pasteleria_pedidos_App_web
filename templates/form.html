@@ -1,0 +1,110 @@
+{% extends '/base.html'%} {% block title%} Formulario {% endblock %} {% block
+body %}
+
+<div class="flex-container">
+  <h1 class="title">Solicitud de pedidos</h1>
+  {% if name %}
+  <h3 class="title">{{ name }}</h3>
+  {% endif %}
+  <form action="/form" method="post">
+    <div class="data data-1">
+      <aside>Datos del Cliente:</aside>
+      <label for="name">Nombre:</label><br />
+      <div class="caja-input">
+        <input name="name" id="name" type="text" /><br />
+      </div>
+
+      <label for="tel">Telefono:</label><br />
+      <div class="caja-input">
+        <input name="tel" id="tel" type="text" />
+      </div>
+      <br />
+
+      <label for="direccion">direccion:</label><br />
+      <div class="caja-input">
+        <input name="direccion" id="direccion" type="text" />
+      </div>
+      <br />
+
+      <label for="correo">correo electronico:</label><br />
+      <div class="caja-input">
+        <input name="correo" id="correo" type="email" />
+      </div>
+      <br />
+
+      <label for="retiro">fecha retiro y hora:</label><br />
+      <div class="caja-input">
+        <input name="retiro" id="retiro" type="datetime-local" />
+      </div>
+      <br />
+
+      <label for="eventos">Evento deseado:</label><br />
+      <div class="caja-input">
+        <select name="eventos" id="eventos">
+          <option value="Baby shower">Baby shower</option>
+          <option value="15 años" selected>15 años</option>
+          <option value="matrimonio">Matrimonio</option>
+          <option value="boda">Boda</option>
+          <option value="otro">otro</option>
+        </select>
+      </div>
+      <br />
+    </div>
+    <div class="data data-2">
+      <aside>Datos del queque:</aside>
+      <label for="cantidad">Cantidad de queques:</label><br />
+      <div class="caja-input">
+        <input name="cantidad" id="cantidad" type="number" min="1" value="1" />
+      </div>
+      <br />
+
+      <label for="sabores">Sabores:</label><br />
+      <div class="caja-input">
+        <select name="sabores" id="sabores">
+          <option value="vainilla">Vainilla</option>
+          <option value="chocolate">Chocolate</option>
+        </select>
+      </div>
+      <br />
+      <label for="lutres">Estilos de lustres:</label><br />
+      <div class="caja-input">
+        <select name="lutres" id="lutres">
+          <option value="glaceado de mantequilla">
+            glaceado de mantequilla
+          </option>
+          <option value="fondant">fondant</option>
+        </select>
+      </div>
+      <br />
+      <label for="tamano">Tamaño de queque:</label><br />
+      <div class="caja-input">
+        <select name="tamano" id="tamano">
+          <option value="pequeño">Pequeño</option>
+          <option value="mediano">Mediano</option>
+          <option value="grande">Grande</option>
+        </select>
+      </div>
+      <br />
+      <label for="forma">Forma:</label><br />
+      <div class="caja-input">
+        <select name="forma" id="forma">
+          <option value="rectangulo">Rectangulo</option>
+          <option value="cuadrado">Cuadrado</option>
+          <option value="redondo">Redondo</option>
+        </select>
+      </div>
+      <br />
+
+      <label for="adicional">Adicionales:</label><br />
+      <div class="caja-input caja-larga">
+        <input name="adicional" id="adicional" type="text" />
+      </div>
+      <br />
+    </div>
+    <div class="container-boton">
+      <input type="submit" value="Enviar" class="boton" />
+    </div>
+  </form>
+</div>
+
+{% endblock %}
